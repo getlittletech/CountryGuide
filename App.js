@@ -6,20 +6,20 @@
 
 import React, { Component } from 'react';
 import {View} from 'react-native'
+import store from './store/store'
+import {Provider} from 'react-redux'
 
-import SearchBar from 'CountryGuide/components/Search/SearchBar'
+import CountrySearch from 'CountryGuide/components/CountrySearch/CountrySearch'
 
 export default class App extends Component<{}> {
   render() {
     return (
-      <View
-        style={{flex: 1, paddingTop: 100}}>
-        <SearchBar onSearch={this.onSearch} />
-      </View>
+      <Provider store={store}>
+        <View
+          style={{flex: 1, paddingTop: 100}}>
+          <CountrySearch />
+        </View>
+      </Provider>
     );
-  }
-
-  onSearch = (text) => {
-    console.log(text)
   }
 }

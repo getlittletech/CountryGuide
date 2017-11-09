@@ -37,6 +37,7 @@ class SearchBar extends Component {
   onCancel = () => {
     this.setState({text: ""})
     Keyboard.dismiss()
+    this.props.onCancel()
   }
 }
 
@@ -68,7 +69,8 @@ const styles = StyleSheet.create({
 })
 
 SearchBar.propTypes = {
-  onSearch: PropTypes.func.isRequired
+  onSearch: PropTypes.func.isRequired,
+  onCancel: PropTypes.func.isRequired
 }
 
 export default SearchBar
