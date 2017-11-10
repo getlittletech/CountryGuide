@@ -9,7 +9,7 @@ import {
 
 import {
   countryDetailsUrl
-} from 'CountryGuide/countries_api/config'
+} from 'CountryGuide/utils/countries_api/config'
 
 export const fetchCountryDetails = (query) => async dispatch => {
   const detailsUrl = countryDetailsUrl(query)
