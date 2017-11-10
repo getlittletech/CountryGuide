@@ -6,3 +6,7 @@ const COUNTRIES_SEARCH_FILTER = '?fields=name;alpha3Code'
 export const countriesSearchUrl = (query) =>  {
   return COUNTRIES_ROOT_URL + COUNTRIES_SEARCH_ENDPOINT + query + COUNTRIES_SEARCH_FILTER
 }
+
+export const countryDetailsUrl = (query) =>  {
+  return COUNTRIES_ROOT_URL + COUNTRIES_SEARCH_ENDPOINT + query
+}

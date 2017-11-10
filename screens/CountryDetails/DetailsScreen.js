@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import {View, Text} from 'react-native'
 
+import CountryInfo from 'CountryGuide/components/CountryInfo/Info'
+
 class DetailsScreen extends Component {
 
   static navigationOptions = ({navigation}) => ({
@@ -9,7 +11,7 @@ class DetailsScreen extends Component {
 
   render() {
     return (
-      <View><Text>DETAILS!</Text></View>
+      <CountryInfo country={this.props.navigation.state.params.country}/>
     )
   }
 }
