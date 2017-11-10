@@ -5,7 +5,7 @@ import {
 } from './constants'
 
 const initialState = {
-  info: [],
+  info: {},
   isFetching: true, // note that we set it to true directly to show spinner
   error: ""
 }

@@ -37,8 +37,8 @@ class Info extends Component {
       )
     }
 
-    if (currentCountry.info.length > 0) {
-      const country = currentCountry.info[0]
+    if (!!currentCountry.info) {
+      const country = currentCountry.info
       let latitude = 0
       let longitude = 0
       if (!!country.latlng) {
@@ -79,6 +79,12 @@ class Info extends Component {
         </View>
       )
     }
+
+    return (
+      <View>
+        <Text>Error: Did not get details for the country.</Text>
+      </View>
+    )
   }
 
   listLanguages = (languages) => {
