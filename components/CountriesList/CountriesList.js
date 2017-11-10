@@ -28,8 +28,15 @@ export default class CountriesList extends Component {
 
     if (!!countries && countries.length > 0) {
       return (
-        <ScrollView>
-          <List>
+        <ScrollView
+          keyboardShouldPersistTaps='always'
+        >
+          <List
+            containerStyle={{
+              marginTop: 0,
+              borderTopWidth: 0
+            }}
+          >
             {
               countries.map((country) => <CountryItem country={country} key={country.alpha3Code} onCountrySelected={this.props.onCountrySelected}/>)
             }

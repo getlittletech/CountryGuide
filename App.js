@@ -8,16 +8,22 @@ import React, { Component } from 'react';
 import {View} from 'react-native'
 import store from './store/store'
 import {Provider} from 'react-redux'
+import {StackNavigator} from 'react-navigation'
 
-import CountrySearch from 'CountryGuide/components/CountrySearch/CountrySearch'
+import SearchScreen from './screens/CountrySearch/SearchScreen'
+import DetailsScreen from './screens/CountryDetails/DetailsScreen'
 
 export default class App extends Component<{}> {
   render() {
+    const MainNavigator = StackNavigator({
+      search: {screen: SearchScreen},
+      details: {screen: DetailsScreen}
+    })
+
     return (
       <Provider store={store}>
-        <View
-          style={{flex: 1, paddingTop: 100}}>
-          <CountrySearch />
+        <View style={{flex: 1}}>
+            <MainNavigator />
         </View>
       </Provider>
     );

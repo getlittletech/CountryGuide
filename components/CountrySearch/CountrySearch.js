@@ -19,7 +19,7 @@ class CountrySearch extends Component {
     return (
       <View style={styles.container}>
         <SearchBar onSearch={this.onSearch} onCancel={this.onCancel} />
-        <CountriesList countries={this.props.countries} onCountrySelected={(country) => {console.log("selected ", country)}}/>
+        <CountriesList countries={this.props.countries} onCountrySelected={this.props.onCountrySelected}/>
       </View>)
   }
 
