@@ -8,7 +8,7 @@ import {
 
 import {
   countriesSearchUrl
-} from './countries_api'
+} from 'CountryGuide/countries_api/config'
 
 export const fetchCountries = (query) => async dispatch => {
   const searchUrl = countriesSearchUrl(query)
