@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -49,8 +50,6 @@
 		D6E9D9C6F1F643589F150F6B /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B2D23CE7D184683971715A6 /* Zocial.ttf */; };
 		D7F9AAF6CC274748BFB636DD /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B8F9E4EB2FA44041B0E09B74 /* FontAwesome.ttf */; };
 		ED5220A7F440416985242050 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E17682B1BE9463C89B3EE4E /* Feather.ttf */; };
-		2FF3171EB98D4B919EDC60A4 /* libRNSVG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F50B33D5E9242A6866B78F4 /* libRNSVG.a */; };
-		33EE016BF7D24C5F9224C632 /* libRNSVG-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E223CC6A1D84CDA8E42A30E /* libRNSVG-tvOS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -370,9 +369,6 @@
 		B8F9E4EB2FA44041B0E09B74 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		BE8D8D5ACDE84E65AC8191C0 /* AirMaps.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = AirMaps.xcodeproj; path = "../node_modules/react-native-maps/lib/ios/AirMaps.xcodeproj"; sourceTree = "<group>"; };
 		C990FF9A0307473CBA57D56C /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
-		10C3898E71A4475F802FD9DB /* RNSVG.xcodeproj */ = {isa = PBXFileReference; name = "RNSVG.xcodeproj"; path = "../node_modules/react-native-svg/ios/RNSVG.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		5F50B33D5E9242A6866B78F4 /* libRNSVG.a */ = {isa = PBXFileReference; name = "libRNSVG.a"; path = "libRNSVG.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		5E223CC6A1D84CDA8E42A30E /* libRNSVG-tvOS.a */ = {isa = PBXFileReference; name = "libRNSVG-tvOS.a"; path = "libRNSVG-tvOS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -403,8 +399,6 @@
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				6A8EBC5BDC7B459298AE257E /* libRNVectorIcons.a in Frameworks */,
 				912BF0F876354380BB0AA281 /* libAirMaps.a in Frameworks */,
-				2FF3171EB98D4B919EDC60A4 /* libRNSVG.a in Frameworks */,
-				33EE016BF7D24C5F9224C632 /* libRNSVG-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,7 +601,6 @@
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				7724002BFC024833AFB504C2 /* RNVectorIcons.xcodeproj */,
 				BE8D8D5ACDE84E65AC8191C0 /* AirMaps.xcodeproj */,
-				10C3898E71A4475F802FD9DB /* RNSVG.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
