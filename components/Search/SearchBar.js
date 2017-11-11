@@ -19,6 +19,7 @@ class SearchBar extends Component {
             style={styles.input}
             value={this.state.text}
             placeholder={this.placeholderText}
+            underlineColorAndroid='rgba(0,0,0,0)'
           />
         </View>
         <Button

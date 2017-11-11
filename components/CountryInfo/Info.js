@@ -7,7 +7,7 @@ import * as actions from './actions'
 
 const SCREEN_WIDTH = Dimensions.get('window').width
 
-const flagDimensions = { width: SCREEN_WIDTH / 3, height: 120}
+const flagDimensions = mapDimensions = { width: SCREEN_WIDTH / 3, height: 120}
 
 class Info extends Component {
   constructor(props) {
@@ -54,7 +54,9 @@ class Info extends Component {
                 scalesPageToFit={false}
                 source={{html: currentCountry.info.flagHtml}}
                 style={{ width: flagDimensions.width, height: flagDimensions.height}}
+                scrollEnabled={false}
               />
+              <View style={styles.webViewBlock}></View>
             </View>
             <View style={styles.image}>
               <MapView
@@ -64,8 +66,7 @@ class Info extends Component {
                   latitudeDelta: 7,
                   longitudeDelta: 15,
                 }}
-                scrollEnabled={false}
-                style={{width: SCREEN_WIDTH / 3, height: 120}}
+                style={{width: mapDimensions.width, height: mapDimensions.height}}
                 cacheEnabled={Platform.OS === 'android'}
               />
             </View>
@@ -139,6 +140,15 @@ const styles = StyleSheet.create ({
    },
    text: {
      margin: 10
+   },
+   webViewBlock: {
+     // to disable webview scroll on android
+     position: 'absolute',
+     bottom: 0,
+     right: 0,
+     width: flagDimensions.width * 1.5,
+     height: flagDimensions.height,
+     backgroundColor: 'rgba(0,0,0,0)'
    }
 })
 
