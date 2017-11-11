@@ -1,22 +1,23 @@
 import React, {Component} from 'react'
 import {View, Text, StyleSheet, ActivityIndicator, WebView, Dimensions, Platform} from 'react-native'
 import {connect} from 'react-redux'
-import SVGImage from 'react-native-svg-image';
 import MapView from 'react-native-maps';
 
 import * as actions from './actions'
 
 const SCREEN_WIDTH = Dimensions.get('window').width
 
+const flagDimensions = { width: SCREEN_WIDTH / 3, height: 120}
+
 class Info extends Component {
   constructor(props) {
     super(props)
-    this.props.fetchCountryDetails(props.country.name)
+    this.props.fetchCountryDetails(props.country.name, flagDimensions)
   }
 
   render() {
     const currentCountry = this.props.currentCountry
-    console.log(currentCountry)
+
     if (currentCountry.isFetching) {
       return (
         <View style = {styles.container}>
@@ -49,9 +50,10 @@ class Info extends Component {
         <View style={{flex: 1, justifyContent: 'flex-start', marginTop: 10}}>
           <View style={styles.imageWrapper}>
             <View style={styles.image}>
-              <SVGImage
-                style={{ width: SCREEN_WIDTH / 3, height: 120}}
-                source={{uri: country.flag}}
+              <WebView
+                scalesPageToFit={false}
+                source={{html: currentCountry.info.flagHtml}}
+                style={{ width: flagDimensions.width, height: flagDimensions.height}}
               />
             </View>
             <View style={styles.image}>

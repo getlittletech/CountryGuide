@@ -2,7 +2,7 @@ import {AsyncStorage} from 'react-native'
 
 export const get = async (name) => {
   let country = await AsyncStorage.getItem(name)
-  return country
+  return JSON.parse(country)
 }
 
 export const set = (country) => {

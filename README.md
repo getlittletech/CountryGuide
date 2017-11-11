@@ -11,8 +11,6 @@ Setup is not so complicated:
 
 # TODO:
 
-- Add cache layer for country details
-- Cancel older requests if there are newer
 - Add cache invalidation date
-- Find a better solution for flag display
 - Find better deltas for map display
+- Cancel older requests if there are newer
