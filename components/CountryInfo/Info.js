@@ -1,9 +1,11 @@
 import React, {Component} from 'react'
-import {View, Text, StyleSheet, ActivityIndicator, WebView, Dimensions, Platform} from 'react-native'
+import {View, Text, StyleSheet, WebView, Dimensions, Platform} from 'react-native'
 import {connect} from 'react-redux'
 import MapView from 'react-native-maps';
 
 import * as actions from './actions'
+
+import Loading from 'CountryGuide/components/LoadingView/Loading'
 
 const SCREEN_WIDTH = Dimensions.get('window').width
 
@@ -21,11 +23,7 @@ class Info extends Component {
     if (currentCountry.isFetching) {
       return (
         <View style = {styles.container}>
-          <ActivityIndicator
-               animating
-               color = '#bc2b78'
-               size = "large"
-               style = {styles.activityIndicator}/>
+          <Loading />
         </View>
       )
     }
@@ -121,12 +119,6 @@ const styles = StyleSheet.create ({
       justifyContent: 'center',
       alignItems: 'center',
       marginTop: 70
-   },
-   activityIndicator: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      height: 80
    },
    imageWrapper: {
      flex: 1,

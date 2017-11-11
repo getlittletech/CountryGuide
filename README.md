@@ -13,4 +13,5 @@ Setup is not so complicated:
 
 - Add cache invalidation date
 - Find better deltas for map display
+- Specify to user if there are no countries or if there are countries, but still fetching
 - Cancel older requests if there are newer
